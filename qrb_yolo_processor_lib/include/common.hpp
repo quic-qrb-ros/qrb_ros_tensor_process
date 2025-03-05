@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 
+#include <cstdint>
 #include "bounding_box.hpp"
 
 namespace qrb::yolo_processor

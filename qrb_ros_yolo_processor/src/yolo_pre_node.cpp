@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #include "builtin_interfaces/msg/time.hpp"
-#include "cv_bridge/cv_bridge.h"
+#include "cv_bridge/cv_bridge.hpp"
 #include "qrb_ros_yolo_processor/yolo_pre_node.hpp"
 
 namespace qrb_ros::yolo_processor
