@@ -7,6 +7,9 @@
 #include <vector>
 
 #include "common.hpp"
+#include "opencv2/core.hpp"
+#include "opencv2/imgproc.hpp"
+#include "opencv2/opencv.hpp"
 
 namespace qrb::yolo_processor
 {
@@ -25,4 +28,4 @@ public:
 };
 
 }  // namespace qrb::yolo_processor
-#endif // _QRB_YOLO_DETECTION_OVERLAY_HPP_
+#endif  // _QRB_YOLO_DETECTION_OVERLAY_HPP_

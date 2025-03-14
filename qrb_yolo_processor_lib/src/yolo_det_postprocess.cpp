@@ -1,6 +1,8 @@
 // Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
 // SPDX-License-Identifier: BSD-3-Clause-Clear
 
+#include "yolo_det_postprocess.hpp"
+
 #include <yaml-cpp/yaml.h>
 
 #include <cstdint>
@@ -10,7 +12,6 @@
 #include "opencv2/core.hpp"
 #include "opencv2/imgproc.hpp"
 #include "opencv2/opencv.hpp"
-#include "yolo_det_postprocess.hpp"
 
 namespace qrb::yolo_processor
 {
@@ -53,8 +54,8 @@ void YoloDetPostProcessor::process(const std::vector<Tensor> & tensors,
    *
    * Yolo TFLite model output 3 tensors shown below, N means the detected object count in one
    * inference cycle, and is a fixed value up to model
-   *   - tensors[0] --> bbox tensor with shape float32[1,N,4], store the coordinate info of bouding
-   *     box for N objects
+   *   - tensors[0] --> bbox tensor with shape float32[1,N,4], store the coordinate info of
+   * bouding box for N objects
    *   - tensors[1] --> score tensor with shape float32[1,N], store confidence of N objeces
    *   - tensors[2] --> label tensor with shape float32[1,N], store label index of N objeces
    */
@@ -94,9 +95,8 @@ void YoloDetPostProcessor::process(const std::vector<Tensor> & tensors,
     // obj count check
     if (tensor_bbox.shape[1] != tensor_score.shape[1] ||
         tensor_bbox.shape[1] != tensor_label.shape[1]) {
-      oss << "Inconsistent obj count, "
-          << " tensor_bbox=" << tensor_bbox.shape[1] << " tensor_score=" << tensor_score.shape[1]
-          << " tensor_label=" << tensor_label.shape[1];
+      oss << "Inconsistent obj count, " << " tensor_bbox=" << tensor_bbox.shape[1]
+          << " tensor_score=" << tensor_score.shape[1] << " tensor_label=" << tensor_label.shape[1];
       break;
     }
     err = false;

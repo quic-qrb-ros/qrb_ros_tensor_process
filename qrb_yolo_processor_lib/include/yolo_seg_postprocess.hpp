@@ -40,8 +40,8 @@ private:
    * \brief Validate input params for class method "process"
    * \details TFLite model output 3 tensors shown below, N means the detected object count in one
    * inference cycle, and is a fixed value up to model
-   *   - tensors[0] --> bbox tensor with shape float32[1,N,4], store the coordinate info of bouding
-   *     box for N objects
+   *   - tensors[0] --> bbox tensor with shape float32[1,N,4], store the coordinate info of
+   * bouding box for N objects
    *   - tensors[1] --> score tensor with shape float32[1,N], store confidence of N objeces
    *   - tensors[2] --> mask tensor with shape float32[1,32,N]
    *   - tensors[3] --> label tensor with shape float32[1,N], store label index of N objeces

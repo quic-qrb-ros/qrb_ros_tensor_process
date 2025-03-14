@@ -4,6 +4,7 @@
 #ifndef _QRB_YOLO_PROCESSOR_COMMON_HPP_
 #define _QRB_YOLO_PROCESSOR_COMMON_HPP_
 
+#include <cstdint>
 #include <string>
 #include <vector>
 
@@ -89,7 +90,6 @@ struct YoloInstance
   {
   }
 };
-
 
 /**
  * \brief make CV_TYPE as per DataType::dtype and channel number

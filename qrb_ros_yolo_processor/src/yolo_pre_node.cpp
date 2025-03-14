@@ -1,9 +1,11 @@
 // Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
 // SPDX-License-Identifier: BSD-3-Clause-Clear
 
-#include "builtin_interfaces/msg/time.hpp"
-#include "cv_bridge/cv_bridge.h"
 #include "qrb_ros_yolo_processor/yolo_pre_node.hpp"
+
+#include <cv_bridge/cv_bridge.h>
+
+#include "builtin_interfaces/msg/time.hpp"
 
 namespace qrb_ros::yolo_processor
 {
